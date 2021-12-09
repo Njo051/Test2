@@ -26,11 +26,14 @@ def calculateInterest(interest, kids, car): # Parametere fungerer som en lokal v
     
 
 def kalkulator():
-    termArray=np.array([])                  #år eller måned
-    amountInterestArray = np.array([])      # renter i kroner
-    amountDeductionArray = np.array([])     # avdrag i kroner
-    amountTermArray = np.array([])          # terminbeløp i kroner
-
+    termArray=np.array([])                  #år eller måned.         # np.array 
+    amountInterestArray = np.array([])      # renter i kroner        # 
+    amountDeductionArray = np.array([])     # avdrag i kroner        #
+    amountTermArray = np.array([])          # terminbeløp i kroner.  #
+### ARRAYYYYYYYYYYY UNDER HER 
+    ### Vi kan regne ledd for ledd direkte med hele arrayer.
+    ### Hvis vi lagrer tallene i en liste, må vi la en løkke løpe gjennom lista for å gjøre regneoperasjoner på tallene. Når vi lagrer tallene i en numpy-array, kan vi regne på alle tall samtidig, som om de var et enkelt tall.
+    ### En array likner på en liste av tall.
     ### En Array kan holde mer enn en verdi av gangen, og referer til et index nummer for å finne riktig. 
     ### en type datastruktur
 
