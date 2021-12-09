@@ -46,13 +46,13 @@ def kalkulator():
     # Regner ut verdiene for lånet
     total = int(round((loan - capital) * (interest ** terms)))
     denominator = 0                 # nevneren i brøken på side 376
-    for i in range(terms):
+    for i in range(terms):            
         denominator = denominator + interest ** i
     termAmount = int(round(total / denominator))
 
     # Legger til termin-år, terminbeløp, avdrag, og rente for alle terminene i sine respektive lister
     # Append legger til et element i listen. 
-    for i in range(terms):
+    for i in range(terms):     ### Returnerer en rekke av nummer, starter fra 0 som standard og øker med en, stopper før et spesifisert nummer. 
         termArray = np.append(termArray, i + 1)
         amountTermArray = np.append(amountTermArray, termAmount)
         amountDeductionArray = np.append(amountDeductionArray, int(round(termAmount/(interest ** (i + 1)))))
@@ -100,7 +100,7 @@ def plott_laan(termArray, amountDeductionArray, amountInterestArray, termAmount)
     plt.xticks(termArray)
 
     
-    for n in termArray:
+    for n in termArray:   # 
          
         deductionPercent = (amountDeductionArray[len(termArray) -int(n)] / (amountDeductionArray[len(termArray) -int(n)] + amountInterestArray[len(termArray) -int(n)])) * 100
 
@@ -139,7 +139,7 @@ def eksempel(array):
         denominator = denominator + interest ** i   
     termAmount = int(round(total / denominator))
 
-    for i in range(terms):
+    for i in range(terms): 
         termArray = np.append(termArray, i + 1)
         amountTermArray = np.append(amountTermArray, termAmount)
         amountDeductionArray = np.append(amountDeductionArray, int(round(termAmount / (interest ** (i + 1)))))
